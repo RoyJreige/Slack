@@ -1,0 +1,528 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #000;
+  font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI",
+    Tahoma, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI",
+    Tahoma, Arial, sans-serif;
+}
+.header {
+  display: block;
+}
+
+.topNav {
+  padding: 0;
+  height: 80px;
+  background-color: transparent;
+  border-bottom: none;
+  z-index: 1000;
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.nav_container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+@media (min-width: 1358px) {
+  .nav_container {
+    max-width: 1230px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 48rem) {
+  .nav_container {
+    padding: 0 4vw;
+  }
+}
+
+.slack_logo_container {
+  padding-right: 32px;
+  display: flex;
+  align-items: center;
+  width: 93px;
+}
+
+.logo_link {
+  display: inline-block;
+  font-size: 0;
+  padding: 0;
+  border: none;
+}
+
+.slack_logo {
+  overflow: hidden;
+  display: inline block;
+  width: 100px;
+  shape-rendering: geometricprecision;
+  cursor: pointer;
+}
+
+.nav_list {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: 67.8125rem) {
+  .nav_list {
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+}
+
+@media (orientation: landscape) {
+  .nav_list {
+    margin: 0;
+  }
+}
+
+@media (min-width: 67.8125rem) {
+  .nav_options {
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+}
+
+.nav_options {
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.drop {
+  color: #1d1d1d;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  position: relative;
+  padding-right: 1rem;
+}
+
+.drop::after {
+  right: 2px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 47%;
+  background-image: url(https://a.slack-edge.com/3099b/marketing/img/icons/icon_chevron_black_nav.svg);
+  width: 8px;
+  height: 5px;
+  background-size: 8px 5px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  transition: transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: rotate(0);
+}
+
+.nav_item {
+  width: auto;
+  position: relative;
+  font-size: 0.9375rem;
+  color: #1d1d1d;
+  cursor: pointer;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  display: inline-block;
+  padding: 1rem;
+  font-weight: 700;
+}
+.nav_item a {
+  text-decoration: none;
+  color: #1d1d1d;
+}
+
+.nav_right {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  padding-right: 0;
+  list-style: none;
+}
+
+.nav_right_link {
+  display: inline-block;
+  color: #1d1d1d;
+  border: 1px solid transparent;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  margin-right: 1.875rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.link_btn {
+  margin-left: 0.5rem;
+  color: #611f69;
+  background-color: transparent;
+  padding: 0.75rem 1rem;
+  fill: #611f69;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 1px #611f69;
+  appearance: none;
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (min-width: 48rem) {
+  .link_btn {
+    display: inline-block;
+    white-space: nowrap;
+    flex-basis: auto;
+    width: auto;
+  }
+}
+.try_free {
+  padding: 0.75rem 1rem;
+
+  background-color: #611f69;
+  fill: #fff;
+  appearance: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  justify-content: center;
+  font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI",
+    Tahoma, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2857;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#main {
+  flex: 1 1 0;
+  display: block;
+}
+
+.billboard {
+  max-width: none;
+  padding-bottom: 0;
+  background: #f6efe8;
+  margin: 0 auto;
+  display: block;
+  padding-top: 128px;
+}
+@media (min-width: 48rem) {
+  .billboard {
+    padding-top: 8rem;
+
+    max-width: none;
+  }
+}
+
+.billboard_container {
+  align-items: flex-start;
+  grid-gap: normal;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+@media (min-width: 48rem) {
+  .billboard_container {
+    display: grid;
+    grid-column-gap: 5%;
+    grid-template-columns: 40% 55%;
+    align-items: center;
+    justify-items: self-end;
+  }
+}
+@media (min-width: 425px) {
+  .billboard_container > :first-child {
+    order: 2;
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 84.875rem) {
+  .billboard_container {
+    max-width: 76.875rem;
+    padding: 0;
+  }
+}
+@media (min-width: 48rem) {
+  .billboard_container {
+    padding: 0 4vw;
+  }
+}
+
+@media (min-width: 48rem) {
+  .billboard_container > :first-child {
+    margin-top: 0;
+  }
+}
+
+.billboard_container > :first-child {
+  order: 2;
+}
+
+.billboard_illustration {
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+}
+
+.hidden_span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.billboard_illustration img {
+  margin-left: 0;
+  width: 100%;
+  border: 0;
+  height: auto;
+}
+
+.billboard_header {
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  margin-right: 0;
+}
+@media (min-width: 48rem) {
+  .billboard_header {
+    margin-right: 5%;
+  }
+}
+
+.billboard_h1 {
+  font-family: Slack-Larsseit, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma,
+    Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.0625;
+  letter-spacing: -1.5px;
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 64rem) {
+  .billboard_h1 {
+    font-size: 4rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .billboard_h1 {
+    font-size: calc(2.75rem + (20 * (100vw - 400px) / 624));
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .billboard_h1 {
+    margin: 0 auto 1.5rem;
+  }
+}
+
+.billboard_copy {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+
+  font-weight: 400;
+  line-height: 1.333;
+  letter-spacing: -0.2px;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 64rem) {
+  .billboard_copy {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 25rem) {
+  .billboard_copy {
+    font-size: calc(1.125rem + (2 * (100vw - 400px) / 624));
+  }
+}
+
+.billboard_header > :last-child {
+  margin-bottom: 0;
+}
+
+.billboard_signup {
+  width: 100%;
+  overflow: visible;
+  text-align: left;
+}
+
+.bill_try {
+  padding: 19px 40px 20px;
+}
+
+.google_signup {
+  padding: 0;
+  background-color: #4285f4;
+  color: #fff;
+  margin-bottom: 0;
+  position: relative;
+  fill: #611f69;
+  box-shadow: inset 0 0 0 1px #4285f4;
+}
+
+@media (min-width: 73.3125rem) {
+  .google_signup {
+    margin-top: -1px;
+  }
+}
+
+@media (min-width: 48rem) {
+  .google_signup {
+    display: inline-block;
+    white-space: nowrap;
+    flex-basis: auto;
+    width: auto;
+    margin-left: 0.5rem;
+  }
+}
+
+.google_logo {
+  background: #fff;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: 49px;
+  padding: 0.875rem;
+  margin-right: 0;
+  border-radius: 2px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.sigupWithGoogle_text {
+  padding-left: 4rem;
+  display: flex;
+  height: 57px;
+  align-items: center;
+  margin-left: 0;
+  padding-right: 1rem;
+  justify-content: center;
+  background-color: #4285f4;
+  color: #fff;
+  position: relative;
+  box-shadow: inset 0 0 0 1px #611f69;
+}
+
+#nav_menu_btn {
+  border-radius: 0;
+  margin-left: 2rem;
+
+  appearance: none;
+  background: 0 0;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 67.8125rem) {
+  #nav_menu_btn {
+    display: none;
+  }
+}
+
+@media (max-width: 67.8125rem) {
+  .nav_right,
+  .nav_list {
+    display: none;
+  }
+}
+
+.nav_menu_svg {
+  fill: #454245;
+  overflow: hidden;
+  width: 18px;
+  height: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 48rem) {
+  .bill_try {
+    display: inline-block;
+    white-space: nowrap;
+    flex-basis: auto;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .try_free {
+    background-color: #611f69;
+    color: #fff;
+    fill: #fff;
+    appearance: none;
+
+    border: none;
+    border-radius: 4px;
+    font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI",
+      Tahoma, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 19px 40px 20px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .billboard_signup {
+    width: 452px;
+    height: 121px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .billboard_illustration {
+    margin-top: 0;
+  }
+}
